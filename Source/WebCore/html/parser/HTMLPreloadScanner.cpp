@@ -57,6 +57,7 @@ public:
     void processAttributes(const HTMLToken::AttributeList& attributes)
     {
         if (m_tagName != imgTag
+            && m_tagName != pictureTag
             && m_tagName != inputTag
             && m_tagName != linkTag
             && m_tagName != scriptTag
@@ -74,6 +75,7 @@ public:
             if (m_tagName == scriptTag || m_tagName == imgTag) {
                 if (attributeName == srcAttr)
                     setUrlToLoad(attributeValue);
+            } else if (m_tagName == pictureTag) {
             } else if (m_tagName == linkTag) {
                 if (attributeName == hrefAttr)
                     setUrlToLoad(attributeValue);
