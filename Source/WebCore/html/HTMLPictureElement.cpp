@@ -49,10 +49,7 @@ namespace WebCore {
 using namespace HTMLNames;
 
 HTMLPictureElement::HTMLPictureElement(const QualifiedName& tagName, Document* document)
-    : HTMLElement(tagName, document)
-    , m_imageLoader(this)
-    , m_form(NULL)
-    , m_compositeOperator(CompositeSourceOver)
+    : HTMLImageElement(tagName, document, NULL)
 {
     ASSERT(hasTagName(pictureTag));
 }
@@ -69,4 +66,16 @@ PassRefPtr<HTMLPictureElement> HTMLPictureElement::create(const QualifiedName& t
 
 HTMLPictureElement::~HTMLPictureElement()
 {
+}
+
+PassRefPtr<HTMLPictureElement> HTMLPictureElement::createForJSConstructor(Document* document, const int* optionalWidth, const int* optionalHeight)
+{
+    RefPtr<HTMLPictureElement> picture = adoptRef(new HTMLPictureElement(imgTag, document));
+    if (optionalWidth)
+        picture->setWidth(*optionalWidth);
+    if (optionalHeight)
+        picture->setHeight(*optionalHeight);
+    return picture.release();
+}
+
 }

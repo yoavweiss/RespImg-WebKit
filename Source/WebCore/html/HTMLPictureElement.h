@@ -35,6 +35,7 @@ public:
     static PassRefPtr<HTMLPictureElement> create(Document* document);
 
     static PassRefPtr<HTMLPictureElement> create(const QualifiedName& tagName, Document* document);
+    static PassRefPtr<HTMLPictureElement> createForJSConstructor(Document* document, const int* optionalWidth, const int* optionalHeight);
 
 };
 
