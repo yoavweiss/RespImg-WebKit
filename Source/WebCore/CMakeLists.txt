@@ -1364,6 +1364,7 @@ SET(WebCore_SOURCES
     html/HTMLHtmlElement.cpp
     html/HTMLIFrameElement.cpp
     html/HTMLImageElement.cpp
+    html/HTMLPictureElement.cpp
     html/HTMLImageLoader.cpp
     html/HTMLIntentElement.cpp
     html/HTMLInputElement.cpp
