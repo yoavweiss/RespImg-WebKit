@@ -1084,6 +1084,7 @@
             'html/HTMLHtmlElement.idl',
             'html/HTMLIFrameElement.idl',
             'html/HTMLImageElement.idl',
+            'html/HTMLPictureElement.idl',
             'html/HTMLInputElement.idl',
             'html/HTMLIntentElement.idl',
             'html/HTMLKeygenElement.idl',

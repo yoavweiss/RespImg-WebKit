@@ -446,6 +446,7 @@ SET(WebCore_IDL_FILES
     html/HTMLHtmlElement.idl
     html/HTMLIFrameElement.idl
     html/HTMLImageElement.idl
+    html/HTMLPictureElement.idl
     html/HTMLIntentElement.idl
     html/HTMLInputElement.idl
     html/HTMLKeygenElement.idl
